@@ -8,7 +8,7 @@ public class MQue {
         for (int i = 1; i <= 100; i++)
         {
             tmp = flag * 1.0 / i;
-            flag = -1;
+            flag = -flag;
             sum += tmp;
         }
         System.out.println(sum);

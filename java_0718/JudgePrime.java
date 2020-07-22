@@ -2,6 +2,8 @@ package java_0718;
 
 import java.util.Scanner;
 
+import static java.lang.Math.sqrt;
+
 public class JudgePrime {
 
     public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class JudgePrime {
         }
     }
     public static int isPrime(int x) {
-        for (int i = 2; i < x - 1; i++) {
+        for (int i = 2; i < sqrt(x); i++) {
             if (x % i == 0) {
                 return 0;
             }

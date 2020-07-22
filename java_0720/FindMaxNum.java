@@ -1,26 +1,22 @@
 package java_0720;
 
-import java.util.Scanner;
 
 public class FindMaxNum {
-    public static void main(String[]args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("请输入a的值：");
-        int a=sc.nextInt();
-        System.out.println("请输入b的值：");
-        int b=sc.nextInt();
-        int max = max2(a,b);
-        System.out.println(max);
-        boolean Equals=isEquals(a,b);
-        System.out.println(Equals);
+    public static void main(String[] args) {
+        int a = 2;
+        int b = 5;
+        int c = 8;
+        System.out.println(max3(a,b,c));
     }
 
-    public static int max2(int a,int b){
-        return (a>b)?a:b;
+    public static int max2(int a, int b) {
+        return (a > b) ? a : b;
     }
 
-    public static boolean isEquals(int a,int b){
-        return a==b;
+    public static int max3(int a,int b,int c){
+        int maxTwo = max2(a,b);
+        int max = max2(c,maxTwo);
+        return max;
     }
 
 }
