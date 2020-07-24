@@ -1,11 +1,22 @@
 package java_0723;
 
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 //可以直接写 Arrays.binarySearch()
 public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6}; //一定要是个有序数组
         //如果不是一个有序的 就加: Arrays.sort(arr);
+
+//        int[] arr = new int[];
+//        Scanner sc = new Scanner(System.in);
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = sc.nextInt();
+//        }
+//        Arrays.sort(arr);
+
         System.out.println(binarySearch(arr, 4));
     }
     public static int binarySearch(int[] arr,int key) {
