@@ -1,0 +1,25 @@
+
+public class ReverseList {
+    public ListNode reverseList(ListNode head) {
+        if (head == null) { // 空链表情况
+            return null;
+        }
+        if (head.next == null) { // 链表中只有一个元素的时候
+            return head;
+        }
+        ListNode newHead = null; //新链表的头节点
+        ListNode cur = head; //当前要反转的节点
+        ListNode prev = null; //这是自己创建的一个新的节点,为cur的前驱节点
+        while (cur != null) {
+            ListNode curNext = cur.next; //记录位置
+            if (cur.next == null) { //走到了链表的末尾
+                newHead = cur;
+            }
+            cur.next = prev; //链表箭头换向
+            prev = cur;
+            cur = curNext;
+        }
+        return newHead;
+    }
+
+
