@@ -15,7 +15,11 @@ public class ArrayList implements List {
     }
 
     public ArrayList(List other) {
-        // TODO: 留着后边再说
+        array = new int[other.size()];
+        for (int i = 0; i < other.size(); i++) {
+            array[i] = other.get(i);
+        }
+        size = other.size();
     }
 
     // 平时时间复杂度是 O(1)
@@ -172,5 +176,19 @@ public class ArrayList implements List {
             }
         }
         return -1;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < size; i++) {
+            sb.append(array[i]);
+            if (i != size - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+
+        return sb.toString();
     }
 }
